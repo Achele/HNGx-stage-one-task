@@ -8,25 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <section>
-        <picture>
-          <img
-            src="asset/IMG_1072.HEIC"
-            alt="Achez code"
-            data-testid="slackDisplayImage"
-          />
-        </picture>
+    <main class="card">
+      <img
+        src="asset/IMG_1072.jpg"
+        alt="Achez code"
+        data-testid="slackDisplayImage"
+      />
+      <section class="info">
+        <h1 data-testid="slackUserName">Achez Code</h1>
+        <p data-testid="myTrack" class="track">Frontend Track</p>
+        <a href="http://" target="_blank" rel="noopener noreferrer"
+          >Source code</a
+        >
+        <p>
+          <span data-testid="currentDayOfTheWeek" id="dayOfWeek"></span>
+          <span data-testid="currentUTCTime" id="currentTime"></span>
+        </p>
       </section>
-      <h1 data-testid="slackUserName">Achez Code</h1>
-      <p data-testid="myTrack">Frontend Track</p>
-      <a href="http://" target="_blank" rel="noopener noreferrer"
-        >Source code</a
-      >
-      <p>
-        <span data-testid="currentDayOfTheWeek">Thursday</span>
-        <span data-testid="currentUTCTime">5pm</span>
-      </p>
     </main>
     <script src="main.js"></script>
   </body>
