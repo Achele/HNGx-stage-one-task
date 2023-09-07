@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  border: 2px solid white;
+  width: 250px;
+  border-radius: 1em;
+}
+
+.card {
+  width: 400px;
+  /* height: 200px; */
+  /* display: flex; */
+  justify-content: space-between;
+  margin: 2em auto;
+  text-align: center;
+  /* animation: mymove 5s infinite; */
+  background-color: #2a2c41;
+  border-radius: 1em;
+  padding: 1.5em;
+}
+
+h1 {
+  color: hotpink;
+  padding-top: 0.5em;
+  font-size: 3em;
+}
+
+p {
+  color: aliceblue;
+  padding: 1em 0;
+}
+
+a {
+  background-color: blueviolet;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  border-radius: 2em;
+  margin: 1em 0;
+  text-transform: capitalize;
+}
+
+a:hover {
+  background-color: hotpink;
+}
+
+.track {
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
