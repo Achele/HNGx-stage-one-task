@@ -9,19 +9,19 @@
 const dayEl = document.getElementById("dayOfWeek");
 const timeEl = document.getElementById("currentTime");
 
-let dayOfWeek;
-let currentTime;
-
 function updateDateAndTime() {
-  let currentDate = Date.now();
-  console.log(currentDate);
-  dayOfWeek = new Date(currentDate).toLocaleDateString(undefined, {
-    weekday: "long",
-  });
-  currentTime = new Date(currentDate).toLocaleTimeString();
+  const currentDate = new Date();
+  const hours = currentDate.getUTCHours();
+  const minutes = currentDate.getUTCMinutes();
+  const seconds = currentDate.getUTCSeconds();
+
+  const dayOfWeek = currentDate.toLocaleDateString("en", { weekday: "long" });
+
+  const currentTime = hours + ":" + minutes + ":" + seconds;
 
   dayEl.textContent = dayOfWeek;
   timeEl.textContent = currentTime;
 }
 
 window.onload = updateDateAndTime;
+setInterval(updateDateAndTime, 1000);
