@@ -6,18 +6,15 @@
  * display the current date and time on window load
  */
 
-const dayEl = document.getElementById("dayOfWeek");
-const timeEl = document.getElementById("currentTime");
+const dayEl = document.getElementById("currentDayOfTheWeek");
+const timeEl = document.getElementById("currentUTCTime");
 
 function updateDateAndTime() {
   const currentDate = new Date();
-  const hours = currentDate.getUTCHours();
-  const minutes = currentDate.getUTCMinutes();
-  const seconds = currentDate.getUTCSeconds();
 
   const dayOfWeek = currentDate.toLocaleDateString("en", { weekday: "long" });
 
-  const currentTime = hours + ":" + minutes + ":" + seconds;
+  const currentTime = Date.now();
 
   dayEl.textContent = dayOfWeek;
   timeEl.textContent = currentTime;
